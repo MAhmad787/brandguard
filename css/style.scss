@@ -154,11 +154,11 @@ html {
 // Contact
 .contact {
   width: 100%;
-  max-height: 1140px;
   height: 700px;
   text-align: center;
   justify-content: space-between;
   background: url("../img/home.png") no-repeat center/cover;
+  padding-top: 2rem;
 
   h1 {
     font-size: 2.8rem;
@@ -166,20 +166,85 @@ html {
     color: white;
   }
   .content {
+    max-width: 1140px;
+    width: 100%;
+    height: max-content;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    padding-inline: 1.6rem;
+    margin-inline: auto;
     .form {
-      width: 50%;
+      width: 46%;
+      background-color: $primary-color;
+      border-radius: 20px;
+      padding: 1.4rem 2rem;
+      h2 {
+        font-weight: 500;
+        margin-bottom: 1rem;
+        text-align: left;
+        span {
+          font-weight: 600;
+        }
+      }
       form {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        div {
+          width: 100%;
+          position: relative;
+          img {
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 16px;
+          }
+        }
+
+        input,
+        textarea {
+          outline: none;
+          width: 100%;
+          border: 1px solid black;
+          padding: 9px 10px;
+          padding-left: 34px;
+          border-radius: 20px;
+          margin-bottom: 1.4rem;
+          background: none;
+          color: black;
+          font-weight: 600;
+          &::placeholder {
+            color: #2d2d2d;
+          }
+        }
+        textarea {
+          padding-left: 18px;
+          resize: none;
+        }
+        button {
+          background-color: black;
+          color: white;
+        }
       }
     }
     .info {
       width: 50%;
+      padding-top: 1rem;
+      h2 {
+        margin-bottom: 2rem;
+        text-align: left;
+        line-height: 45px;
+        span {
+          color: $primary-color;
+        }
+      }
+      p {
+        font-size: 15px;
+        color: white;
+      }
     }
   }
 }
