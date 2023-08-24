@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BrandGuard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -70,7 +64,10 @@
       <div class="content">
         <aside class="form">
           <h2>Get Your Business <span>Up</span> and <span>Running</span></h2>
-          <form>
+          <form
+            action="https://formsubmit.co/mahmadmaqbool787@gmail.com"
+            method="POST"
+          >
             <div class="name">
               <input
                 type="text"
@@ -87,7 +84,7 @@
                 type="email"
                 placeholder="Email"
                 id="company"
-                name="name"
+                name="email"
                 required
                 autocomplete="none"
               />
@@ -111,6 +108,14 @@
               cols="30"
               rows="6"
             ></textarea>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New submission!" />
+            <input
+              type="hidden"
+              name="_next"
+              value="http://127.0.0.1:5500/thanks.html"
+            />
+
             <button class="primary-btn" type="submit">Send</button>
           </form>
         </aside>
@@ -131,7 +136,6 @@
       </div>
     </section>
     <footer class="footer">
-      <h1>BrandGuard</h1>
       <hr />
       <p>All Rights are Reserved | &copy; Copyright 2023</p>
     </footer>
