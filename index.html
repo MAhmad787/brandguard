@@ -36,7 +36,7 @@
           quality and integrity, businesses can build trust, influence public
           perception, and ensure long-term success in today's digital landscape.
         </p>
-        <button class="primary-btn">Get Started</button>
+        <a href="#contact"><button class="primary-btn">Get Started</button></a>
       </header>
     </section>
 
@@ -80,7 +80,7 @@
                 id="name"
                 name="name"
                 required
-                autocomplete="none"
+                autocomplete="off"
               />
               <img src="./img/name.png" alt="" />
             </div>
@@ -91,7 +91,7 @@
                 id="company"
                 name="email"
                 required
-                autocomplete="none"
+                autocomplete="off"
               />
               <img src="./img/email.png" alt="" />
             </div>
@@ -102,17 +102,11 @@
                 id="company"
                 name="company"
                 required
-                autocomplete="none"
+                autocomplete="off"
               />
               <img src="./img/company.png" alt="" />
             </div>
-            <textarea
-              placeholder="Message"
-              name="message"
-              id="message"
-              cols="30"
-              rows="6"
-            ></textarea>
+            <textarea placeholder="Message" name="Message" required></textarea>
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value="New submission!" />
             <input
