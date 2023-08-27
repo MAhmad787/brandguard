@@ -63,6 +63,22 @@ html {
     padding-inline: 16px;
     box-shadow: 0 8px 32px 0 rgba(black, 0.3);
     z-index: 5;
+
+    .burger {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      display: none;
+      z-index: 10;
+      .line {
+        width: 34px;
+        height: 4px;
+        border-radius: 30px;
+        background-color: black;
+        margin-bottom: 5px;
+      }
+    }
+
     .navlist {
       display: flex;
       align-items: center;
@@ -118,8 +134,7 @@ html {
 
 .pricing {
   width: 100%;
-  height: 600px;
-  padding-top: 4rem;
+  padding-block: 3rem 2rem;
   text-align: center;
   background-color: #2d2d2d;
   h1 {
@@ -157,11 +172,10 @@ html {
 // Contact
 .contact {
   width: 100%;
-  height: 700px;
   text-align: center;
   justify-content: space-between;
   background: url("../img/home.png") no-repeat center/cover;
-  padding-top: 2rem;
+  padding-block: 2rem;
 
   h1 {
     font-size: 2.8rem;
@@ -259,8 +273,146 @@ html {
   color: white;
   font-size: 15px;
   font-weight: 600;
-  padding-top: 1rem;
+  padding-block: 1rem;
   hr {
     margin-block: 0.5rem 2rem;
+  }
+}
+
+// Responsive styling
+
+// Media Queries
+
+// At 655px
+
+@media (max-width: 665px) {
+  .contact {
+    .content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .info,
+      .form {
+        width: 95%;
+      }
+      .info {
+        padding-top: 3rem;
+        text-align: left;
+        h2 {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// At 525px
+
+@media (max-width: 525px) {
+  .home {
+    // Javascript Classes to Change style
+    .navbar {
+      transition: all 0.3s ease-in-out;
+      .navlist {
+        visibility: hidden;
+        scale: 0;
+        width: 0;
+        transform-origin: top left;
+        margin-top: 40px;
+        transition: all 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        li {
+          transition: all 0.6s ease;
+          opacity: 0;
+        }
+      }
+      .burger {
+        display: block;
+      }
+      .brand {
+        position: absolute;
+        top: 16px;
+        left: 20px;
+      }
+    }
+    .resp-nav {
+      top: 0;
+      height: 300px;
+      width: 100vw;
+      border-radius: 0;
+      .navlist {
+        visibility: visible;
+        scale: 1;
+        width: 100%;
+        border-top: 2px solid white;
+        li {
+          margin-top: 1.6rem;
+          opacity: 1;
+          a {
+            padding: 0;
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing {
+    .boxes {
+      flex-direction: column;
+      .box {
+        width: 92%;
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// At 425px
+
+@media (max-width: 425px) {
+  // Button
+  .primary-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .home {
+    .header {
+      h1 {
+        font-size: 2rem;
+        line-height: 40px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .contact {
+    .content {
+      padding-inline: 6px;
+      .info {
+        h2 {
+          line-height: 34px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    p {
+      font-size: 12px;
+      padding-bottom: 1rem;
+    }
+    hr {
+      margin-block: 1rem;
+    }
   }
 }
